@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-ser;
+}
+.contenedor{
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.Titulo{
+    color: #6495ed;   
+    font-size: 60px;
+    text-align: center; 
+    margin-bottom: 60px;
+}
+.contenedor-de-ayuda{
+    color: #3a3939;   
+    font-size: 30px;
+    text-align: center; 
+    margin-bottom: 60px;
+    font-size: 30px;
+    margin: 0;
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 600px;
+    background: #c2e59c;  
+    /* fallback for old browsers */
+    background: linear-gradient(to right, hsla(207, 87%, 67%, 0.609), hsla(89, 58%, 75%, 0.609)), url(../img/Ilustración_sin_título.png);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(207, 87%, 67%, 0.609), hsla(89, 58%, 75%, 0.609)), url(../img/Ilustración_sin_título.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a{
+    color:#414141 ;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+
+}
+nav > a:hover{
+    text-decoration: underline;
+}
+
+.wave{
+    rotate: 60°;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #000000;
+}
+/*conetendores*/
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.agua-es-vida{
+    width: 30%;
+}
+
+.mision{
+    width: 100px;
+    text-align: right;
+}
+
+.vision{
+    float: right;
+    width: 100px;
+    text-align: left;
+}
+
+.ballerina{
+    background: #1c92d2;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f2fcfe, #1c92d2); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+/* footer*/
+footer{
+    text-align: center;
+}
+
+a:hover{
+    text-decoration:none;
+}
+.section-padding {
+    padding: 10px 0;
+}
+.bottom {
+    background-color: #0a1c2e;
+}
+.bottom .copyright {
+    color: #e5e5e5;
+    font-weight: 600;
+}
+.copyright a {
+    color: #f2ff49;
+    margin-left: 3px;
+    padding-right: 3px;
+}
+.bottom p {
+    margin-bottom: 0;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.copyright p span {
+    color: #d1caca;
+}
+.bottom .copyright p, .bottom .copyright a:hover{
+    color: #6c6d83;
+}
+
+
+
+
