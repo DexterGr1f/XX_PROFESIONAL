@@ -147,46 +147,6 @@ a:hover{
     color: #6c6d83;
 }
 
-/*carrusel*/
-.dia{
-    color: #6495ed;   
-    font-size: 60px;
-    text-align: center; 
-    margin-bottom: 60px;
-}
-.carousel slide{
- top: auto;
- bottom:auto ;
- left: auto;
- right: auto;
 
-}
 
-.carousel-item active{
-    right: -500px;
-}
 
-.d-block{
-    display: block;
-    margin: auto;
-    width:1290px ;
-    height:400px;
-
-}
-
-.carousel slide{
-    color: #000;
-}
-.carousel-control-next{
-
-    color: #000;
-}
-.carousel-control-prev-icon{
-    color: #000;
-    background-color: #000;
-    
-}
-.carousel-control-next-icon{
-    color: #000;
-   background-color: #000;
-}
