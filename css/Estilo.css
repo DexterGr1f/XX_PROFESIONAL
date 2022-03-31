@@ -38,7 +38,7 @@ header{
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(207, 87%, 67%, 0.609), hsla(89, 58%, 75%, 0.609)), url(../img/Ilustración_sin_título.png);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
+    background-size: 100vw 65vh;
     background-attachment: fixed;
     position: relative;
 }
@@ -85,6 +85,7 @@ header .textos-header{
     justify-content: space-evenly;
     
 }
+
 .agua-es-vida{
     width: 30%;
 }
@@ -713,4 +714,7 @@ h6 {
 	margin-bottom: .75rem;
 	margin-top: 26px;
 	margin-bottom: 15px;
+}
+.formulario{
+  text-align: center;
 }
