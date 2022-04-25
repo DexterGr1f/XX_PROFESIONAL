@@ -15,76 +15,86 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
 
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
-<header class="top-line">
-    <a href="index.html" class="logo"><img src="img/icons8-water-wave-48.png"  alt="logo alt"></a>
-    <div class="mobile-menu-btn"><i class="fa fa-bars"></i> Меnu</div>
-    <nav class="main-menu top-menu">
-        <ul>
-            <li class="nav-item active">
-                <a href="index.html">Rutas Del Mar</a>
-            </li>
-            <li class="nav-item">
-                <a href="login.html">Ingresar</a>
-            </li>
-            <li class="nav-item">
-                <a href="promos.html">Promociones</a>
-            </li>
-            <li class="nav-item">
-                <a href="servicios.html">Quienes Somos</a>
-            </li>
-            <li class="nav-item">
-                <a href="contactos.html">Contactos</a>
-            </li>
-            <li class="nav-item">
-                <a href="Registrarse.html">Registrarse</a>
-            </li>
-        </ul>
+<body class="cont">
+    <nav class="navbar navbar-expand-lg navStyle">
+        <a class="brand-navbar" href="#"><img src="img/icons8-water-wave-48.png" alt="Responsive image" ></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+            <span><i class="fas fa-align-right iconStyle"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ml-auto navList">
+                <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Rutas del Mar<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fas fa-cogs"></i>Ingresar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="promos.html" class="nav-link"><i class="fas fa-briefcase"></i>Promociones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link"><i class="fas fa-phone"></i>Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactos.html" class="nav-link"><i class="fas fa-users"></i>Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Registrarse.html" class="nav-link"><i class="fas fa-users"></i>Registrarse</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-</header>
 
-<section>
-    <div class="container">
-        <div class="row forms-container">
-            <div class="col-md-4 mt-5">
-                <div class="formbackground">
-                    <div class="skew-up-background"></div>
-                    <h1 class="text-center white-text mt-2">Inicio de sesión</h1>
-                    <form>
-                        <div class="form-group mt-4">
-                            <label class="white-text">Ingrese Su Email</label>
-                            <input type="email" class="form-control" id="inputCorreo" placeholder="Correo Electronico">
-                        </div>
-                        <div class="errortext">
-                            <span id="error2">Ingrese su Correo correctamente</span>
-                        </div>
-                        <div class="form-group mt-4">
-                            <label class="white-text">Ingrese Su Contraseña</label>
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                        </div>
-                        <div class="errortext">
-                            <span id="error3">Ingrese su Contraseña correctamente</span>
-                          </div>
-                        <div class="text-center mt-5">
-                            <button id="blogin" class="btn btn-primary" type="submit">Iniciar Sesión</button>
-                        </div>
-                        <hr>
-                        <div>
-                            <p>Ya tienes una Cuenta? <a class="link" href="Registrarse.html"> Ingresa Aqui</a> </p>
-                          </div>
-                    </form>					    
+
+
+    <section>
+        <div class="container">
+            <div class="row forms-container">
+                <div class="col-md-4 mt-5">
+                    <div class="formbackground">
+                        <div class="skew-up-background"></div>
+                        <h1 class="text-center white-text mt-2">Inicio de sesión</h1>
+                        <form>
+                            <div class="form-group mt-4">
+                                <label class="white-text" >Ingrese Su Email</label>
+                                <input type="email" class="form-control" id="inputCorreo" placeholder="Correo Electronico">
+                            </div>
+                            <div class="errortext">
+                                <span id="error2">Ingrese su Correo correctamente</span>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label class="white-text" >Ingrese Su Contraseña</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                            <div class="errortext">
+                                <span id="error3">Ingrese su Contraseña correctamente</span>
+                              </div>
+                            <div class="text-center mt-5">
+                                <button id="blogin" class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                            </div>
+                            <hr>
+                            <div>
+                                <p>Ya tienes una Cuenta? <a class="link" href="Registrarse.html"> Ingresa Aqui</a> </p>
+                              </div>
+                        </form>					    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<br>
-<br>
-<br>
-<br>
+    </section>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+
 
 
 <footer id="dk-footer" class="dk-footer">
@@ -132,17 +142,14 @@
                 </div>
                 <!-- End Footer info -->
                 <div class="footer-awarad">
-                    <img src="images/icon/best.png" alt="">
+                
                     <p>Purificadora del mar chile</p>
                 </div>
             </div>
             <!-- End Col -->
         
             <div class="col-md-12 col-lg-8">
-                <br>
-                <br>
-                <br>
-                <br>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact-us">
@@ -195,12 +202,12 @@
                                     <a href="#">Projectos</a>
                                 </li>
                                 <li>
-                                    <a href="#">Nuestro Equipos</a>
+                                    <a href="#">Nuestro Equipo</a>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <a href="#">Contactanos</a>
+                                    <a href="#">Contacto</a>
                                 </li>
 
                             </ul>
@@ -214,8 +221,7 @@
                                 <h3>Escribenos</h3>
                                 <span class="animate-border border-black"></span>
                             </div>
-                            <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                                Contactanos si tienes problemas!!!</p>
+                            <p>Contactanos si tienes problemas!!!</p>
                             <form action="#">
                                 <div class="form-row">
                                     <div class="col dk-footer-form">
@@ -281,11 +287,13 @@
     </div>
     <!-- End Back to top -->
 </footer>
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
-  
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
