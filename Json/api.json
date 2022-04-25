@@ -1,0 +1,65 @@
+{
+    "aguas":[
+        {
+            "tipo": "Recarga Bidon sin gas",
+            "foto":"img/540.png",
+            "lts":"20 Litros",
+            "precio":"$3.300 (Recarga)"
+        },
+        {
+            "tipo":"Recarga Bidon con gas",
+            "foto":"img/540.png",
+            "lts":"20 Litros",
+            "precio":"$4.500 (Recarga)"
+        },
+        {
+            "tipo":"Bidon Purificado",
+            "foto":"img/540.png",
+            "lts":"1,5 litros",
+            "precio":"$6.500"
+        },
+        {
+            "tipo":"Soda",
+            "foto":"img/260.png",
+            "lts":"2 Litros ",
+            "precio":"$2.200 c/u"
+        },
+        {
+            "tipo":"Dispensador Chico",
+            "foto":"img/302.png",
+            "lts":"USB",
+            "precio":"$9.990"
+        },
+        {
+            "tipo":"Dispensador Mediano",
+            "foto":"img/305.png",
+            "lts":"Soporte",
+            "precio":"$11.890"
+        },
+        {
+            "tipo":"Dispensador Grande",
+            "foto":"img/304.png",
+            "lt":"Pedestal",
+            "precio":"$114.000"
+        },
+        {
+            "tipo":"Dispensador ",
+            "foto":"img/301.png",
+            "lts": "Dispensador Sobre Mesa",
+            "precio":"$59.990"
+        },
+        {
+            "tipo":"Dispensador",
+            "foto":"img/300.png",
+            "lts": "Diespensador Bidon oculto",
+            "precio":"$209.000"
+        },
+        {
+            "tipo":"Par de Manillas",
+            "foto":"img/500.png",
+            "lts": "Manillas para transportar bidones",
+            "precio":"$5.000"
+        }
+
+    ]
+}
