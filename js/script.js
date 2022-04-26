@@ -25,6 +25,35 @@ function validarRegistro() {
 }
 
 
+/*mapa*/
+// if HTML DOM Element that contains the map is found...
+if (document.getElementById('map-canvas')){
+ 
+    // Coordinates to center the map
+    var myLatlng = new google.maps.LatLng(-33.0256456,-71.5261824);
+ 
+    // Other options for the map, pretty much selfexplanatory
+    var mapOptions = {
+        zoom: 14,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    // Attach a map to the DOM Element, with the defined settings
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    const image ="img/icons8-water-wave-48.png";
+    //
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        draggable:true,
+        title:"Drag me!",
+        icon: image
+    });
+}
+
+
+
 
 
 
@@ -130,33 +159,7 @@ $("#ValidarPass").click(function() {
 });
 
 
-  
-/*mapa*/
-// if HTML DOM Element that contains the map is found...
-if (document.getElementById('map-canvas')){
- 
-    // Coordinates to center the map
-    var myLatlng = new google.maps.LatLng(-33.0256456,-71.5261824);
- 
-    // Other options for the map, pretty much selfexplanatory
-    var mapOptions = {
-        zoom: 14,
-        center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
- 
-    // Attach a map to the DOM Element, with the defined settings
-    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    const image ="img/icons8-water-wave-48.png";
-    //
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        draggable:true,
-        title:"Drag me!",
-        icon: image
-    });
-}
+
 
 /*api*/
 $(document).ready(function () {
@@ -175,5 +178,5 @@ $(document).ready(function () {
     });
 });
 
-
+  
 
