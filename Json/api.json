@@ -39,7 +39,7 @@
         {
             "tipo":"Dispensador Grande",
             "foto":"img/304.png",
-            "lt":"Pedestal",
+            "lts":"Pedestal",
             "precio":"$114.000"
         },
         {
@@ -51,7 +51,7 @@
         {
             "tipo":"Dispensador",
             "foto":"img/300.png",
-            "lts": "Diespensador Bidon oculto",
+            "lts": "Dispensador Bidon oculto",
             "precio":"$209.000"
         },
         {
