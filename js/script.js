@@ -163,7 +163,7 @@ $("#ValidarPass").click(function() {
 
 /*api*/
 $(document).ready(function () {
-    $.get("/Json/api.json",function(data){
+    $.get("/XX_PROFESIONAL/Json/api.json",function(data){
         console.log(data);
         $.each(data.aguas,function(i,item){
             $("#API").append(
