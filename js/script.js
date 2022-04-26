@@ -58,35 +58,51 @@ if (document.getElementById('map-canvas')){
 
 
 
+
 $(document).ready(function () {
     var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-    $(".boton").click(function (){
+
+    /*api*/
+    $.get("/XX_PROFESIONAL/Json/api.json", function (data) {
+        console.log(data);
+        $.each(data.aguas, function (i, item) {
+            $("#API").append(
+                "<div class='col'><div class='card'><img src='" + item.foto +
+                "' class='card-img-top' alt='...'><div class='card-body'><h5 class='card-title'>" + item.tipo +
+                "</h5></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + item.lts +
+                "</li><li class='list-group-item'>" + item.precio +
+                "</li></ul><div class='card-body'><a href='#' class='card-link'>Comprar</a></div></div></div>"
+
+            );
+        });
+    });
+    $(".boton").click(function () {
         $(".error").remove();
-        if( $(".nombre").val() == "" ){
+        if ($(".nombre").val() == "") {
             $(".nombre").focus().after("<span class='error'>Ingrese su nombre</span>");
             return false;
-        }else if( $(".email").val() == "" || !emailreg.test($(".email").val()) ){
+        } else if ($(".email").val() == "" || !emailreg.test($(".email").val())) {
             $(".email").focus().after("<span class='error'>Ingrese un email correcto</span>");
             return false;
-        }else if( $(".telefono").val() == ""){
+        } else if ($(".telefono").val() == "") {
             $(".telefono").focus().after("<span class='error'>Ingrese un telefono</span>");
             return false;
-        }else if( $(".asunto").val() == ""){
+        } else if ($(".asunto").val() == "") {
             $(".asunto").focus().after("<span class='error'>Ingrese un asunto</span>");
             return false;
-        }else if( $(".mensaje").val() == "" ){
+        } else if ($(".mensaje").val() == "") {
             $(".mensaje").focus().after("<span class='error'>Ingrese un mensaje</span>");
             return false;
         }
     });
-    $(".nombre, .asunto, .mensaje, .telefono").keyup(function(){
-        if( $(this).val() != "" ){
+    $(".nombre, .asunto, .mensaje, .telefono").keyup(function () {
+        if ($(this).val() != "") {
             $(".error").fadeOut();
             return false;
         }
     });
-    $(".email").keyup(function(){
-        if( $(this).val() != "" && emailreg.test($(this).val())){
+    $(".email").keyup(function () {
+        if ($(this).val() != "" && emailreg.test($(this).val())) {
             $(".error").fadeOut();
             return false;
         }
@@ -97,36 +113,36 @@ $("#blogin").click(function (event) {
     var password = $("#inputPassword").val();
 
     if (password == "") {
-    $("#inputPassword").focus();
-    $("#error3").fadeIn();
-    $("#inputPassword").css({ 'borderColor': '#fa1b1b' });
-    event.preventDefault();
+        $("#inputPassword").focus();
+        $("#error3").fadeIn();
+        $("#inputPassword").css({ 'borderColor': '#fa1b1b' });
+        event.preventDefault();
     } else {
-    $("#error3").hide();
-    $("#inputPassword").css({ 'borderColor': '#008000' });
+        $("#error3").hide();
+        $("#inputPassword").css({ 'borderColor': '#008000' });
     }
 
 });
 
 
-  
+
 /*Validar Correo*/
 $("#blogin").click(function (event) {
     var expr = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+).+([a-zA-Z0-9]{2,4})+$/;
     var correo = $("#inputCorreo").val();
 
     if (correo == "" || !expr.test(correo)) {
-    $("#inputCorreo").focus();
-    $("#error2").fadeIn();
-    $("#inputCorreo").css({ 'borderColor': '#fa1b1b' });
-    event.preventDefault();
+        $("#inputCorreo").focus();
+        $("#error2").fadeIn();
+        $("#inputCorreo").css({ 'borderColor': '#fa1b1b' });
+        event.preventDefault();
     } else {
-    $("#error2").hide();
-    $("#inputCorreo").css({ 'borderColor': '#008000' });
+        $("#error2").hide();
+        $("#inputCorreo").css({ 'borderColor': '#008000' });
     }
 
 });
-$("#btnLogin").click(function() {
+$("#btnLogin").click(function () {
     var Usuario = $("#emailLogin").val();
     var Contraseña = $("#ContrasenaLogin").val();
     var res;
@@ -139,11 +155,11 @@ $("#btnLogin").click(function() {
         res = "Email/Contraseña incorrecto"
         $("#resultadoLoginMal").html(res);
         $("#resultadoLoginBien").html("");
-        
+
     }
 });
 
-$("#ValidarPass").click(function() {
+$("#ValidarPass").click(function () {
     var password = $("#validationPass").val();
     var password2 = $("#validationPass2").val();
     var res;
@@ -158,25 +174,6 @@ $("#ValidarPass").click(function() {
     }
 });
 
-
-
-
-/*api*/
-$(document).ready(function () {
-    $.get("/XX_PROFESIONAL/Json/api.json",function(data){
-        console.log(data);
-        $.each(data.aguas,function(i,item){
-            $("#API").append(
-                "<div class='col'><div class='card'><img src='"+ item.foto + 
-                "' class='card-img-top' alt='...'><div class='card-body'><h5 class='card-title'>" + item.tipo + 
-                "</h5></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + item.lts + 
-                "</li><li class='list-group-item'>" + item.precio + 
-                "</li></ul><div class='card-body'><a href='#' class='card-link'>Comprar</a></div></div></div>"
-                
-            );
-        });
-    });
-});
 
   
 
