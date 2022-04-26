@@ -63,7 +63,7 @@ $(document).ready(function () {
     var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 
     /*api*/
-    $.get("/XX_PROFESIONAL/Json/api.json", function (data) {
+    $.get("/Json/api.json", function (data) {
         console.log(data);
         $.each(data.aguas, function (i, item) {
             $("#API").append(
@@ -107,73 +107,75 @@ $(document).ready(function () {
             return false;
         }
     });
+
+    /*Validar Contraseña*/
+    $("#blogin").click(function (event) {
+        var password = $("#inputPassword").val();
+
+        if (password == "") {
+            $("#inputPassword").focus();
+            $("#error3").fadeIn();
+            $("#inputPassword").css({ 'borderColor': '#fa1b1b' });
+            event.preventDefault();
+        } else {
+            $("#error3").hide();
+            $("#inputPassword").css({ 'borderColor': '#008000' });
+        }
+
+    });
+
+
+
+    /*Validar Correo*/
+    $("#blogin").click(function (event) {
+        var expr = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+).+([a-zA-Z0-9]{2,4})+$/;
+        var correo = $("#inputCorreo").val();
+
+        if (correo == "" || !expr.test(correo)) {
+            $("#inputCorreo").focus();
+            $("#error2").fadeIn();
+            $("#inputCorreo").css({ 'borderColor': '#fa1b1b' });
+            event.preventDefault();
+        } else {
+            $("#error2").hide();
+            $("#inputCorreo").css({ 'borderColor': '#008000' });
+        }
+
+    });
+    $("#btnLogin").click(function () {
+        var Usuario = $("#emailLogin").val();
+        var Contraseña = $("#ContrasenaLogin").val();
+        var res;
+        if (Usuario == "" && Contraseña == "") {
+            res = "Inicio de sesion valido"
+            $("#resultadoLoginBien").html(res);
+            $("#resultadoLoginMal").html("");
+        } else {
+
+            res = "Email/Contraseña incorrecto"
+            $("#resultadoLoginMal").html(res);
+            $("#resultadoLoginBien").html("");
+
+        }
+    });
+
+    $("#ValidarPass").click(function () {
+        var password = $("#validationPass").val();
+        var password2 = $("#validationPass2").val();
+        var res;
+        if ((password2 == password) && (password2 != "")) {
+            res = "Contraseña valida"
+            $("#valPass").html(res);
+            $("#valPass2").html("");
+        } else {
+            res = "Las contraseñas no son iguales"
+            $("#valPass2").html(res);
+            $("#valPass").html("");
+        }
+    });
+
+
+
 });
-/*Validar Contraseña*/
-$("#blogin").click(function (event) {
-    var password = $("#inputPassword").val();
-
-    if (password == "") {
-        $("#inputPassword").focus();
-        $("#error3").fadeIn();
-        $("#inputPassword").css({ 'borderColor': '#fa1b1b' });
-        event.preventDefault();
-    } else {
-        $("#error3").hide();
-        $("#inputPassword").css({ 'borderColor': '#008000' });
-    }
-
-});
-
-
-
-/*Validar Correo*/
-$("#blogin").click(function (event) {
-    var expr = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+).+([a-zA-Z0-9]{2,4})+$/;
-    var correo = $("#inputCorreo").val();
-
-    if (correo == "" || !expr.test(correo)) {
-        $("#inputCorreo").focus();
-        $("#error2").fadeIn();
-        $("#inputCorreo").css({ 'borderColor': '#fa1b1b' });
-        event.preventDefault();
-    } else {
-        $("#error2").hide();
-        $("#inputCorreo").css({ 'borderColor': '#008000' });
-    }
-
-});
-$("#btnLogin").click(function () {
-    var Usuario = $("#emailLogin").val();
-    var Contraseña = $("#ContrasenaLogin").val();
-    var res;
-    if (Usuario == "" && Contraseña == "") {
-        res = "Inicio de sesion valido"
-        $("#resultadoLoginBien").html(res);
-        $("#resultadoLoginMal").html("");
-    } else {
-
-        res = "Email/Contraseña incorrecto"
-        $("#resultadoLoginMal").html(res);
-        $("#resultadoLoginBien").html("");
-
-    }
-});
-
-$("#ValidarPass").click(function () {
-    var password = $("#validationPass").val();
-    var password2 = $("#validationPass2").val();
-    var res;
-    if ((password2 == password) && (password2 != "")) {
-        res = "Contraseña valida"
-        $("#valPass").html(res);
-        $("#valPass2").html("");
-    } else {
-        res = "Las contraseñas no son iguales"
-        $("#valPass2").html(res);
-        $("#valPass").html("");
-    }
-});
-
-
   
 
